@@ -1,0 +1,144 @@
+Selecting the right algorithmic technique for a given problem involves understanding the characteristics of the problem and the strengths and limitations of each technique. Here's a brief overview of each technique you mentioned, along with the types of problems they're best suited for, and examples including input and output formats.
+
+### 1. Dynamic Programming (DP)
+
+**Type of Problem:** DP is used for optimization problems where the problem can be broken down into overlapping subproblems that are solved independently. The solutions to these subproblems are stored and reused to build up solutions to larger problems.
+
+**Input and Output Example:**
+- **Problem:** Fibonacci Sequence.
+- **Input:** An integer `n` (the index of the Fibonacci sequence).
+- **Output:** The `n`th Fibonacci number.
+
+**Example:**
+- Input: `5`
+- Output: `5` (The sequence is `0, 1, 1, 2, 3, 5`)
+
+### 2. Breadth-First Search (BFS)
+
+**Type of Problem:** BFS is used for searching tree or graph data structures. It's ideal for finding the shortest path on unweighted graphs.
+
+**Input and Output Example:**
+- **Problem:** Shortest Path in an unweighted graph.
+- **Input:** A graph and a starting node.
+- **Output:** Shortest path to each node from the starting node.
+
+**Example:**
+- Input: Graph `G`, Start node `A`
+- Output: Shortest path to node `D` is `A -> C -> D`
+
+### 3. Uniform Cost Search (UCS)
+
+**Type of Problem:** UCS is used for finding the lowest cost path in a weighted graph where each edge has a cost associated with it. It's a type of search algorithm that prioritizes paths with the lowest total cost.
+
+**Input and Output Example:**
+- **Problem:** Finding the cheapest path in a weighted graph.
+- **Input:** A weighted graph and a starting node.
+- **Output:** Cheapest path from the start node to every other node.
+
+**Example:**
+- Input: Weighted Graph `G`, Start node `A`
+- Output: Cheapest path to node `D` is `A -> B -> D`
+
+### 4. Greedy Algorithm
+
+**Type of Problem:** Greedy algorithms are used for optimization problems where a local optimal choice is made at each step with the hope of finding a global optimum.
+
+**Input and Output Example:**
+- **Problem:** Coin Change Problem.
+- **Input:** A set of coin denominations and a target amount.
+- **Output:** Minimum number of coins needed to make the target amount.
+
+**Example:**
+- Input: Coins `[1, 2, 5]`, Amount `11`
+- Output: `3` (5 + 5 + 1 = 11)
+
+### 5. Divide and Conquer
+
+**Type of Problem:** This technique involves dividing the problem into smaller subproblems, solving each subproblem independently, and then combining their solutions to solve the original problem.
+
+**Input and Output Example:**
+- **Problem:** Merge Sort.
+- **Input:** An unsorted array of numbers.
+- **Output:** A sorted array.
+
+**Example:**
+- Input: `[3, 1, 4, 1, 5, 9, 2, 6]`
+- Output: `[1, 1, 2, 3, 4, 5, 6, 9]`
+
+### 6. Bounding Function
+
+**Type of Problem:** The bounding function is used in branch and bound algorithms for optimization problems, where it's used to decide whether to explore or prune branches based on the best solution found so far and an estimate of the best possible solution in a given branch.
+
+**Input and Output Example:**
+- **Problem:** Travelling Salesman Problem (TSP).
+- **Input:** A list of cities and distances between them.
+- **Output:** The shortest possible route that visits each city exactly once and returns to the original city.
+
+**Example:**
+- Input: Cities `A, B, C, D` and their distances
+- Output: Shortest path `A -> B -> C -> D -> A` with total distance `X`
+
+### Choosing the Right Technique
+
+The choice of algorithmic technique depends on several factors, including:
+
+- **Problem Type:** Understanding whether the problem involves searching, sorting, optimization, etc., is crucial.
+- **Data Structure:** The structure of the input data (e.g., graphs, arrays) can suggest suitable algorithms.
+- **Performance Requirements:** Time and space complexity considerations can influence the choice.
+- **Problem Constraints:** Specific problem constraints may make certain algorithms more suitable than others.
+
+When analyzing a problem, try to fit it into known problem types and review similar problems solved with each technique. This comparison often provides insights into which technique might work best for your specific problem.
+
+Problem-solving in computer science often revolves around recognizing patterns. These patterns, once identified, can guide you towards the most appropriate algorithmic strategy. Here's an overview of common problem patterns and the types of solutions they typically align with:
+
+### 1. Optimization Problems
+
+These involve finding the best solution from all feasible solutions. Optimization problems often require techniques that explore the solution space efficiently, such as dynamic programming, greedy algorithms, or sometimes even specific optimization algorithms like linear programming.
+
+**Example:** Finding the shortest path in a graph, minimizing the cost of a project under certain constraints, or maximizing profit in a trading scenario.
+
+### 2. Searching and Sorting Problems
+
+These problems focus on finding an element within a dataset or arranging elements in a specific order. Binary search is a go-to for efficiently searching sorted data, while algorithms like QuickSort and MergeSort are standard for sorting tasks.
+
+**Example:** Searching for a specific record in a database, or sorting a list of names alphabetically.
+
+### 3. Combinatorial Problems
+
+Combinatorial problems require you to find, count, or list all possible configurations of a set that satisfy certain criteria. Techniques like backtracking, branch and bound, or even brute force (for smaller datasets) are commonly used.
+
+**Example:** Listing all possible combinations of a set of numbers, or finding all possible ways to arrange a set of objects.
+
+### 4. Partitioning Problems
+
+These involve dividing a dataset into two or more groups based on specific rules. Dynamic programming or greedy algorithms can sometimes solve these problems effectively.
+
+**Example:** Dividing an array into subsets with equal sums or partitioning tasks among workers to minimize the maximum workload.
+
+### 5. Graph Problems
+
+Graph problems involve nodes and edges and can encompass searching, pathfinding, connectivity, and optimization within graphs. Algorithms like Depth-First Search (DFS), Breadth-First Search (BFS), Dijkstra's algorithm (for shortest paths), and Kruskal's or Prim's algorithms (for minimum spanning trees) are typical solutions.
+
+**Example:** Finding the shortest path between two points in a network, or determining if a graph is bipartite.
+
+### 6. Dynamic Problems
+
+Dynamic problems involve making decisions at multiple steps, where each decision impacts future options. Dynamic programming is particularly well-suited for these problems, breaking them down into simpler subproblems and combining these to form a solution.
+
+**Example:** Optimal strategy for a game, or finding the longest increasing subsequence in an array.
+
+### 7. Geometric Problems
+
+These involve spatial configurations and properties of figures and spaces. Solutions might involve computational geometry algorithms.
+
+**Example:** Finding the closest pair of points in a plane, or computing the convex hull of a set of points.
+
+### 8. Numerical Problems
+
+Numerical problems involve performing calculations with numbers, including problems like numerical integration, differentiation, or solving equations. Techniques can range from simple arithmetic to complex algorithms like Newton's method or the Fast Fourier Transform (FFT).
+
+**Example:** Calculating the roots of a polynomial, or simulating the motion of celestial bodies.
+
+### Recognizing the Pattern
+
+Recognizing the problem pattern is crucial for choosing the right algorithmic strategy. It often involves understanding the problem's constraints, the nature of the data involved, and the goal of the problem. With practice, identifying these patterns becomes more intuitive, allowing for more efficient and effective problem-solving.
