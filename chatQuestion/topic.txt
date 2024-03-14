@@ -1,0 +1,292 @@
+Final1Q1:(dijkstra)(shortestPath)(graphPath)
+INPUT             OUTPUT
+4 4               52  (0 3 15) (1 2 20) (2 3 17)
+0 3 15
+1 2 20
+1 3 24
+2 3 17
+
+Final1Q2:(minMarix)(Assignment4)(large maxtrix)
+Input             OUTPUT
+123456789         2053005829
+
+Final1Q3:(Greedy)(grid floor row MAXsum)
+INPUT                       OUTPUT
+5                           285
+4 46 56
+44 52 29
+29 25 54 2 55 30
+11 20 46 33 11 5
+29 5 18 51 15 68
+INPUT                       OUTPUT
+5                           56 + 52 + 54 + 55 + 68 = 285
+4 46 (56)
+44 (52) 29
+29 25 (54) 2 (55) 30
+11 20 46 33 11 5
+29 5 18 51 15 (68)
+
+Final1Q4:
+INPUT                       OUTPUT
+3 5 1.                      4×R=4×1=4 Baht.
+1 4 7
+3 1 2
+Combine and sort: [1, 1, 2, 3, 4, 7]
+Split into pairs: (1+4), (1+3), (2+7)
+
+Final1Q5:(adjust union)
+INPUT                       OUTPUT
+4 6                         6
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 1 0 1 1
+0 0 1 0 1 0
+INPUT                       OUTPUT
+4 6                         6
+0 (1) 0 0 0 0
+(1) (1) (1) 0 0 0
+0 0 (1) 0 1 1
+0 0 (1) 0 1 0
+
+Final1Q6:(minMarix)(Assignment4)(large fibo)
+INPUT                       OUTPUT
+4999998                     28306
+4999999998                  36159
+
+Final1Q7:
+INPUT                       OUTPUT
+3 4 2 2 1 4 1               9
+Shoot the 2nd aircraft destroys 3+4+2, damage = 2+1+4+1 = 8
+Shoot the 5th aircraft destroys 2+1+4, damage += 1 = 9
+
+Final1Q8:(Minimum of row and column which not already use)
+INPUT        OUTPUT
+4            5
+4 3 2 1
+5 5 1 4
+2 1 3 4
+2 3 1 4
+INPUT        OUTPUT
+4            5
+4 3 2 (1)
+5 5 (1) 4
+2 (1) 3 4
+(2) 3 1 4
+
+================================================================================================================================
+Final2Q1:(dynamic)
+INPUT       OUTPUT
+4 3 2 6     29
+
+Step-by-step Process:
+    Initial packets: 2, 3, 4, 6 (sorted for clarity)
+Step 1: Combine 2 and 3 (smallest packets)
+    Cost = 2 + 3 = 5
+    New set of packets: 5, 4, 6
+Step 2: Combine 4 and 5 (next smallest packets)
+    Cost = 4 + 5 = 9
+    New set of packets: 9, 6
+Step 3: Combine 9 and 6 (remaining packets)
+    Cost = 9 + 6 = 15
+    Final packet: 15
+Total cost: The total cost is the sum of the costs at each step:
+    Step 1 cost: 5
+    Step 2 cost: 9
+    Step 3 cost: 15
+Total cost = 5 + 9 + 15 = 29
+
+Final2Q2:(maxtrix fibo)(Assignment4)(large maxtrix)
+INPUT                         OUTPUT
+123456789                     2053005829
+
+Final2Q3:(Greedy)(partitioning function)(indexorder and sorting)
+INPUT                         OUTPUT
+2 8 3 7 4 6 5                 5
+4
+
+Final2Q4:(Greedy)(grid 2 row MAXsum)
+INPUT           OUTPUT
+6 5             29
+6 2 5 3 1
+3 1 8 4 2
+2 1 3 1 1
+1 2 2 1 6
+2 2 1 4 3
+2 1 4 5 4
+
+6 2 (5) 3 1     5+8+1+6+4+5 = 29
+3 1 (8) 4 2
+2 1 3 1 (1)
+1 2 2 1 (6)
+2 2 1 (4) 3
+2 1 4 (5) 4
+
+Final2Q5:(grid sorting function)(count)
+INPUT       OUTPUT
+1 4 5       4        the four swaps are (4,3), (2,4), (3,5), (2,5)
+2 3 6
+INPUT       OUTPUT
+3 2 1       3        the three swap are (1,2), (1,3), (3,2)
+4 5 6
+
+Final2Q6:(bounding function)
+
+Final2Q7:(dfs)(bounding)(knapsack)(greedy)
+INPUT       OUTPUT
+5 3         2        can keep 5 but max is 3 which have value 2
+3 1
+3 2
+3 1
+INPUT       OUTPUT
+10 4        14       can keep 10 but max is 4 and 5 which have value 10 + 4
+4 10
+5 4
+6 3
+7 11
+
+
+================================================================================================================================
+                                                    random question:
+Question 1: Dynamic Dungeon Descent (Simple_Priority_Queue) (dijkstra) (graph)
+graph = {
+    0: {1: 10, 3: 5},
+    1: {0: 10, 2: 10, 3: 15},
+    2: {1: 10, 4: 10},
+    3: {0: 5, 4: 20, 1: 15},
+    4: {2: 10, 3: 20}
+}
+start, target = 0, 4
+changes = [(0, 1, -1), (1, 2, -1), (2, 4, 5), (3, 4, 10)]
+graph = update_graph(graph, changes)
+
+Question 2: Efficient Warehouse Organization(Greedy)(knapsack)(Final2,Q3)(Final2,Q1) (Final1,Q1)
+INPUT                           OUTPUT
+5 3                             3
+4 8 1 2 10
+
+Question 3: Optimal Server Load Balancing(Greedy Matching)(two tuple)
+INPUT                           OUTPUT          Server 1 takes two tasks (10+10=20 load)
+3                               20              Server 2 takes two tasks (10+10=20 load)
+8 16 8                                          Server 3 takes one task (10 load)
+5                                               The maximum load on any server is thus minimized to 20.
+10 10 10 10 10
+
+Question 4: Smart City Lighting (Greedy)
+INPUT                           OUTPUT
+3 4                             4
+1 2 3 4
+2 1 2 3
+3 4 1 2
+
+Question 5: Optimal Fleet Management(Greedy Matching)(two tuple)
+INPUT                           OUTPUT          The first route (100 miles, 500 pounds) is assigned to the third truck (20 mpg, 600 pounds capacity), consuming 5 gallons.
+3                               32.50           The second route (150 miles, 700 pounds) is assigned to the first truck (10 mpg, 1000 pounds capacity), consuming 15 gallons.
+10 1000                                         The third route (200 miles, 300 pounds) is assigned to the second truck (15 mpg, 800 pounds capacity), consuming 13.33 gallons.
+15 800                                          The total fuel consumption is 5 + 15 + 13.33 = 33.33 gallons.
+20 600
+3
+100 500
+150 700
+200 300
+
+Question 6: Friend Circles(Disjointset)(findUnion)(1 make it union and 2 check if it union)
+INPUT                           OUTPUT
+5                               NO           because2 1 3 (is 1 and 3 in the same union) {1,2} != {3,4}        
+6                               YES          because2 1 3 ( 1 2 3 -> {1,2,3,4})
+1 1 2                           NO           because2 4 5 ({1,2,3,4} not union {5})
+1 3 4
+2 1 3
+1 2 3
+2 1 3
+2 4 5
+
+Question 7: City Delivery Drone Routing (Simple_Priority_Queue)(BFS)(move in grid 4 direction)
+INPUT                           OUTPUT
+5 5                             9
+.....
+.#.#.
+.W.#C
+.###.
+.....
+
+Question 8: Optimal Water Distribution in a Drought-Stricken Area(Simple_Priority_Queue)(BFS)(greedy)
+INPUT                           OUTPUT       10 cubic meters from Village 1 to Village 2 at a cost of 2 dollars per cubic meter.
+4 5                             130          15 cubic meters from Village 1 to Village 3 at a cost of 4 dollars per cubic meter.
+10 20 15 5                                   5 cubic meters from Village 1 to Village 4 directly at a cost of 6 dollars per cubic meter.
+1 2 20 2                                         (or choose the path through Villages 2 and 3 to Village 4 for potentially lower cost)
+1 3 15 4                                     5 cubic meters from Village 1 to Village 4 directly at a cost of 6 dollars per cubic meter 
+2 4 15 3                                         (or choose the path through Villages 2 and 3 to Village 4 for potentially lower cost).
+3 4 10 2                                    The remaining needs of Villages 2 and 4 are met by the capacities of pipelines
+1 4 5 6                                          from Village 2 to Village 4 and Village 3 to Village 4.
+                                            The goal is to use the pipelines efficiently to minimize the total cost while ensuring that the water requirements of all villages are satisfied.
+
+Question 9: Optimal Resource Allocation in Automated Factories(Greedy Matching)(two tuple)
+INPUT                           OUTPUT
+5                               450         The most cost-efficient allocation would assign robotic arms with efficiencies 100 and 95 to the station at (1, 1), 90 to the station at (2, 3),
+3                                           and 85, 80, and another 95 to the station at (4, 4).
+1 1 2                                       
+2 3 1                                       The total cost efficiency would be 100 + 95 + 90 + 85 + 80  = 450.
+4 4 3
+5
+100
+80
+95
+90
+85
+
+Question 10: Treasure Hunt in the Mystic Ruins (grid traveler)(move in grid 2 direction right and down)
+INPUT                           OUTPUT
+4                               9
+0 2 X 1
+1 X 3 2
+X 0 0 4
+3 1 2 0
+
+Question 11: Optimal Pathfinding in a Weighted Labyrinth (grid traveler)(move in grid 3 direction right and down and up)
+INPUT                           OUTPUT
+4                               17
+4 -5 6 9
+3 2 -7 5
+-1 0 4 3
+8 -2 1 4
+
+Question 12: Chrono-Conservationist's Dilemma (grid traveler)(move in grid 2 direction right and down)
+INPUT                           OUTPUT
+5 5                             20
+2 3 -1 1 4
+1 -1 2 3 2
+4 1 1 -1 3
+3 2 -1 4 2
+-1 3 2 1 5
+
+Question 13: Interstellar Colony Expansion(dynamic program) (error wtf)
+INPUT                           OUTPUT
+4 3                             225
+2 80 40
+3 70 20 90
+2 60 30
+3 50 85 25
+
+                                                    Harry Porter:
+Question 14: Dumbledore's Army Training Schedules
+INPUT                           OUTPUT
+
+Question 15: Potion Ingredient Harvesting (Greedy)
+Question 16: The Goblin's Coin Conundrum (Greedy)
+Question 17: Sorting the Boggart's Collection (Final2,Q5)
+Question 18: Wizarding Investments in Diagon Alley
+Question 19: Gathering the Lost Artifacts of the Founders
+                                                    Normal Theme:
+Question 20: Minimum Resource Allocation (knapsack)(greedy)
+Question 21: Advanced Scheduling with Uncertainty
+Question 22: Optimal Path with Discounts(from simplePriorityQueue import Simple_Priority_Queue def compare_tuples(x, y): )
+    return x[0] < y[0]
+(shortest path)(BFS)(dijkstra)
+Question 23: Unique Paths in a Grid with Obstacles and Boosters(dynamic grid travler) (move right and down)
+Question 24: Task Scheduling with Deadlines and Profits (greedy)
+Question 25: Maximum Path Sum in a Binary Tree(Binary tree)
+Question 26: Balanced Partition (bound) (DFS)
+Question 27: City Tour with Variable Transportation Modes (dijkstra) ('Hotel', 'A', 'walk', 0, 10)
+Question 28: Optimal Resource Merging for Projects (knapsack)(greedy)
+Question 29: Optimal Resource Allocation with Dependencies (knapsack(Dependencies of items)) hard
+Question 30: Maximum Energy Shield Generation (Error)
